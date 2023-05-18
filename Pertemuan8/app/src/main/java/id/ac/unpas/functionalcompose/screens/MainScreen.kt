@@ -134,8 +134,7 @@ fun MainScreen() {
                 title.value = "Edit Pengelolaan Sampah"
                 val id =
 
-                    backStackEntry.arguments?.getString("id")
-                        ?: return@composable
+                    backStackEntry.arguments?.getString("id") ?: return@composable
                 FormPencatatanSampahScreen(navController =
                 navController, id = id, modifier =
                 Modifier.padding(innerPadding))

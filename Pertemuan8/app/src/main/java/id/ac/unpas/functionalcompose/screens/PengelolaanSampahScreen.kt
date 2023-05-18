@@ -34,7 +34,7 @@ fun PengelolaanSampahScreen(navController : NavHostController, modifier: Modifie
     viewModel.list.observeAsState(initial = listOf())
     Column(modifier = modifier.fillMaxWidth()) {
         Button(onClick = {
-            navController.navigate("tambah-pencatatan-sampah")
+            navController.navigate("tambah-pengelolaan-sampah")
         }) {
             Text(text = "Tambah")
         }
@@ -43,7 +43,7 @@ fun PengelolaanSampahScreen(navController : NavHostController, modifier: Modifie
                 Row(modifier = Modifier
                     .padding(15.dp)
                     .fillMaxWidth().clickable {
-                        navController.navigate("edit-pengelolaansampah/${item.id}")
+                        navController.navigate("edit-pengelolaan-sampah/${item.id}")
                     }) {
                 Column(modifier = Modifier.weight(3f)) {
                         Text(text = "Tanggal", fontSize = 14.sp)
