@@ -9,22 +9,21 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
-import id.ac.unpas.functionalcompose.screens.PengelolaanSampahScreen
-import id.ac.unpas.functionalcompose.ui.theme.FunctionalcomposeTheme
+import id.ac.unpas.functionalcompose.screens.MainScreen
+import id.ac.unpas.functionalcompose.ui.theme.FunctionalComposeTheme
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            FunctionalcomposeTheme {
-                // A surface container using the 'background' color from the
-                theme
+            FunctionalComposeTheme {
+                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    PengelolaanSampahScreen()
+                    MainScreen()
                 }
             }
         }
@@ -33,7 +32,8 @@ class MainActivity : ComponentActivity() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    FunctionalcomposeTheme {
-        PengelolaanSampahScreen()
+    FunctionalComposeTheme {
+        MainScreen()
     }
 }
+
